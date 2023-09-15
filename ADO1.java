@@ -21,13 +21,16 @@ class Main {
     Scanner ler = new Scanner(System.in);
     Random rng = new Random();
     int operation = 0;
+    int[] theArray = null;
+   
+   
     System.out.println("\nBem vindo ao Amazing Mega Blaster Nine F*cking Options Progam HAHAHAHAHAHA");
 
     // while faz com que o programa se repita até a pessoa escolher a opçao 9
     while (!(operation == 9)) {
 
       System.out.printf(
-          "\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n");
+          "\n\n===============================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n===============================================\n\n");
 
       operation = ler.nextInt();
       int op = operation; // esse variavel é apenas para tornar mais curto e legivel a condiçao da opçao
@@ -41,7 +44,7 @@ class Main {
           System.out.println("\n informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          int[] theArray = new int[size];
+          theArray = new int[size];
 
           for (int i = 0; i < size; i++) {
             int num = rng.nextInt(roof) + 1; // soma +1 para que o roof seja o maior numero e nao o excludente
@@ -51,7 +54,7 @@ class Main {
           break;
 
         case 2:
-          System.out.println("\nopissao 2");
+        printar(theArray);
           break;
 
         case 3:
@@ -91,10 +94,32 @@ class Main {
           }
 
       }
-
-    }
+      
+      }
   }
+   //FUNCAO 2
+   public static void printar (int[] theArray) {
+    for (int i = 0; i < theArray.length; i++){
+      System.out.println(theArray[i] + " ");
+    }
+    
+     } 
 }
 // tudo que for escrito entre ("") deve ter um '\n' antes para que possa ter um
 // espaçamento agradavel aos olhos no console, xuxu beleza 👍
-// teste teste teste sexo
+
+
+/* ⠀⠀⠀⠀⣠⡴⠞⠛⠛⠛⠛⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣼⡷⠶⠒⠒⠒⠶⢶⣄⠀⠀⠀⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢠⡞⠁⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⡅⠀⠀⠀⠀⠀⠀⠀⠀⣼⠃⠀⠀⠀⣿⠛⠛⢻⡆⠀⠀⠀⠀⠀
+⠀⢹⡷⠶⣤⣤⣤⣤⣤⡾⠃⠀⠀⠀⠀⢻⠀⠀⠈⣧⠀⠀⠀⠀⠀
+⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⣿⠀⠀⠀⠀⠀
+⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⣿⠀⠀⠀⠀⠀
+⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⣿⠀⠀⠀⠀⠀
+⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣤⡴⠟⠀⠀⠀⠀⢀
+⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⢤⣤⣤⠶⢾⡿
+⠀⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡾⠋⠀
+⠀⠀⠀⠈⠛⠶⠶⠶⣤⣀⠀⠀⠀⠀⢠⡶⠞⠛⠒⠛⠋⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⠶⠴⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  */

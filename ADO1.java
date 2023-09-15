@@ -15,6 +15,7 @@ não realizamos quaisquer outras atividades desonestas para nos beneficiar ou pr
 
 import java.util.Scanner;
 import java.util.Random;
+//ඞ
 
 class Main {
   public static void main(String[] args) {
@@ -37,14 +38,14 @@ class Main {
                           // default, que deve estar na linha 86
 
       switch (operation) {
-
+//ඞ
         case 1:
           System.out.println("\n informe o tamanho do vetor:");
           int size = ler.nextInt();
           System.out.println("\n informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          theArray = new int[size];
+          theArray = new int[size];                                                             /
 
           for (int i = 0; i < size; i++) {
             int num = rng.nextInt(roof) + 1; // soma +1 para que o roof seja o maior numero e nao o excludente
@@ -60,7 +61,7 @@ class Main {
         case 3:
           System.out.println("\nopissao 3");
           break;
-
+                                                                                                                                                                                                            //ඞ
         case 4:
           System.out.println("\nopissao 4");
           break;
@@ -109,7 +110,24 @@ class Main {
 // espaçamento agradavel aos olhos no console, xuxu beleza 👍
 
 
-/* ⠀⠀⠀⠀⣠⡴⠞⠛⠛⠛⠛⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+
+/*. 　　　。　　　　•　 　ﾟ　　。 　　.
+
+　　　.　　　 　　.　　　　　。　　 。　. 　
+
+.　　 。　　　　　 ඞ 。 . 　　 • 　　　　•
+
+　　ﾟ　　 Red was not An Impostor.　 。　.
+
+　　'　　　 1 Impostor remains 　 　　。
+
+　　ﾟ　　　.　　　. ,　　　　.　 . 
+
+
+
+
+ ⠀⠀⠀⠀⣠⡴⠞⠛⠛⠛⠛⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⣼⡷⠶⠒⠒⠒⠶⢶⣄⠀⠀⠀⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⢠⡞⠁⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -123,3 +141,4 @@ class Main {
 ⠀⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡾⠋⠀
 ⠀⠀⠀⠈⠛⠶⠶⠶⣤⣀⠀⠀⠀⠀⢠⡶⠞⠛⠒⠛⠋⠁⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⠶⠴⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  */
+

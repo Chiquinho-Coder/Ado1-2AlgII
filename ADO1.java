@@ -34,8 +34,8 @@ class Main {
           "\n\n===============================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n===============================================\n\n");
 
       operation = ler.nextInt();
-      int op = operation; // esse variavel é apenas para tornar mais curto e legivel a condiçao da opçao
-                          // default, que deve estar na linha 86
+      int op = operation; /* esse variavel é apenas para tornar mais curto e legivel a condiçao da opçao
+                           default/* */
 
       switch (operation) {
 //ඞ
@@ -45,7 +45,7 @@ class Main {
           System.out.println("\n informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          theArray = new int[size];                                                             /
+          theArray = new int[size];                                                             
 
           for (int i = 0; i < size; i++) {
             int num = rng.nextInt(roof) + 1; // soma +1 para que o roof seja o maior numero e nao o excludente
@@ -89,25 +89,49 @@ class Main {
         default:
           if (op != 0 || op != 1 || op != 2 || op != 3 || op != 4 || op != 5 || op != 6 || op != 7 || op != 8
               || op != 9) {
-            System.out.println("\nFavor escolher uma opçao válida!!"); // esse if é enorme eu sei, mas serve para que
-                                                                       // algo aconteça se uma opçao invalida for
-                                                                       // selecionada
+            System.out.println("\nFavor escolher uma opçao válida!!"); /*  esse if é enorme eu sei, mas serve para que
+                                                                              algo aconteça se uma opçao invalida for
+                                                                              selecionada */
           }
 
       }
       
       }
   }
-   //FUNCAO 2
+   //==================================================================FUNCAO 2==================================================================
    public static void printar (int[] theArray) {
     for (int i = 0; i < theArray.length; i++){
       System.out.println(theArray[i] + " ");
     }
     
      } 
+     //==================================================================FUNCAO 3==================================================================
+
+     
+     //==================================================================FUNCAO 4==================================================================
+
+
+     //==================================================================FUNCAO 5==================================================================
+
+
+     //==================================================================FUNCAO 6==================================================================
+
+
+     //==================================================================FUNCAO 7==================================================================
+
+
+     //==================================================================FUNCAO 8==================================================================
 }
 // tudo que for escrito entre ("") deve ter um '\n' antes para que possa ter um
 // espaçamento agradavel aos olhos no console, xuxu beleza 👍
+
+
+
+
+
+
+
+
 
 
 

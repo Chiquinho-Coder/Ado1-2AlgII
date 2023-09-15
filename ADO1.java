@@ -45,7 +45,7 @@ class Main {
           System.out.println("\n informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          theArray = new int[size];                                                             /
+          theArray = new int[size];                                                             
 
           for (int i = 0; i < size; i++) {
             int num = rng.nextInt(roof) + 1; // soma +1 para que o roof seja o maior numero e nao o excludente

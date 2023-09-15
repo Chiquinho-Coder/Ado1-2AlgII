@@ -7,9 +7,7 @@ Pedro Henrique Pinheiro de Oliveira
 Gustavo de Medeiros Sanchez
 Washington Oliveira da Silva
 
-declaramos que
-
-todas as respostas são fruto de nosso próprio trabalho,
+declaramos que todas as respostas são fruto de nosso próprio trabalho,
 não copiamos respostas de colegas externos à equipe,
 não disponibilizamos nossas respostas para colegas externos ao grupo e
 não realizamos quaisquer outras atividades desonestas para nos beneficiar ou prejudicar outros.

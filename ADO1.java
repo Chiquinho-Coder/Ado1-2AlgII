@@ -36,17 +36,18 @@ class Main {
                            
 
       switch (operation) {
-//ඞ
+
         case 1:
           System.out.println("\n Informe o tamanho do vetor:");
           int size = ler.nextInt();
           System.out.println("\n Informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          theArray = new int[size];                                                             
+          size = size -1;
+          theArray = new int[size];                                              
 
           for (int i = 0; i < size; i++) {
-            int num = rng.nextInt(roof) + 1; // soma +1 para que o roof seja o maior numero e nao o excludente
+            int num = rng.nextInt(roof + 1);
             theArray[i] = num;
           }
 
@@ -59,9 +60,9 @@ class Main {
         case 3:
           System.out.println("\nInforme o valor que deseja procurar no vetor: ");
           int numSearch = ler.nextInt();
-          numSearch = case3Search(theArray, numSearch);
-          if (numSearch == -1){
-            System.out.println("\nO valor nao foi encontrado no vetor");
+          int numHas = case3Search(theArray, numSearch);
+          if (numHas == -1){
+            System.out.println("\nO numero " + numSearch + " nao foi encontrado no vetor");
           }
           else{
             System.out.println("\nO numero "+ numSearch + " foi encontrado no vetor");

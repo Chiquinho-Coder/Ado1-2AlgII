@@ -22,7 +22,7 @@ class Main {
     Scanner ler = new Scanner(System.in);
     Random rng = new Random();
     int operation = 0;
-    int[] theArray = null;
+    int[] theFArray = null;
    
    
     System.out.println("\nBem vindo ao Amazing Mega Blaster Nine F*cking Options Progam HAHAHAHAHAHA");
@@ -34,34 +34,35 @@ class Main {
           "\n\n===============================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n===============================================\n\n");
 
       operation = ler.nextInt();
-      int op = operation; /* esse variavel é apenas para tornar mais curto e legivel a condiçao da opçao
-                           default/* */
+      int op = operation; /* esse variavel é apenas para tornar mais curto e legivel a condiçao na opçao 'default' do 'switch'/* */
+                           
 
       switch (operation) {
-//ඞ
+
         case 1:
           System.out.println("\n informe o tamanho do vetor:");
           int size = ler.nextInt();
           System.out.println("\n informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          theArray = new int[size];                                                             
+          theFArray = new int[size];                                                             
 
           for (int i = 0; i < size; i++) {
             int num = rng.nextInt(roof) + 1; // soma +1 para que o roof seja o maior numero e nao o excludente
-            theArray[i] = num;
+            theFArray[i] = num;
           }
 
           break;
 
         case 2:
-        printar(theArray);
+        printar(theFArray);
           break;
 
         case 3:
-          System.out.println("\nopissao 3");
+          System.out.println("\nInforme o valor que deseja procurar no vetor: ");
+          int numSearch = ler.nextInt();
           break;
-                                                                                                                                                                                                            //ඞ
+                                                                                                                                                                                                                                                                                        //ඞ
         case 4:
           System.out.println("\nopissao 4");
           break;
@@ -91,7 +92,7 @@ class Main {
               || op != 9) {
             System.out.println("\nFavor escolher uma opçao válida!!"); /*  esse if é enorme eu sei, mas serve para que
                                                                               algo aconteça se uma opçao invalida for
-                                                                              selecionada */
+                                                                              selecionada ao inves de só nao acontecer nada e voltar para o inicio do loop */
           }
 
       }
@@ -99,13 +100,21 @@ class Main {
       }
   }
    //==================================================================FUNCAO 2==================================================================
-   public static void printar (int[] theArray) {
-    for (int i = 0; i < theArray.length; i++){
-      System.out.println(theArray[i] + " ");
+   public static void printar (int[] theFArray) {
+    for (int i = 0; i < theFArray.length; i++){
+      System.out.println(theFArray[i] + " ");
     }
     
      } 
      //==================================================================FUNCAO 3==================================================================
+    public static int numFound(int[] theFArray, int num ) {
+      for (int i = 0; i < theFArray.length; i++){
+        if (theFArray[i] == num){
+          return i;
+        }
+      }
+      return -1;
+    }
 
      
      //==================================================================FUNCAO 4==================================================================

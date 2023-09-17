@@ -15,7 +15,6 @@ não realizamos quaisquer outras atividades desonestas para nos beneficiar ou pr
 
 import java.util.Scanner;
 import java.util.Random;
-//ඞ
 
 class Main {
   public static void main(String[] args) {
@@ -25,24 +24,22 @@ class Main {
     int[] theArray = null;
    
    
-    System.out.println("\nBem vindo ao Amazing Mega Blaster Nine F*cking Options Progam HAHAHAHAHAHA");
+    System.out.println("\n== Bem vindo ao Programa da Ado1 ==");
 
     // while faz com que o programa se repita até a pessoa escolher a opçao 9
     while (!(operation == 9)) {
 
-      System.out.printf(
-          "\n\n===============================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n===============================================\n\n");
+      System.out.printf("\n\n===============================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n===============================================\n\n");
 
       operation = ler.nextInt();
       int op = operation; /* esse variavel é apenas para tornar mais curto e legivel a condiçao da opçao
                            default/* */
 
       switch (operation) {
-//ඞ
         case 1:
-          System.out.println("\n informe o tamanho do vetor:");
+          System.out.println("\n Informe o tamanho do vetor:");
           int size = ler.nextInt();
-          System.out.println("\n informe o numero limite do seu vetor::");
+          System.out.println("\n Informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
           theArray = new int[size];                                                             
@@ -61,7 +58,7 @@ class Main {
         case 3:
           System.out.println("\nopissao 3");
           break;
-                                                                                                                                                                                                            //ඞ
+                                                                                                                                                                                           
         case 4:
           System.out.println("\nopissao 4");
           break;
@@ -71,11 +68,12 @@ class Main {
           break;
 
         case 6:
-          System.out.println("\nopissao 6");
+          case6Porcentual(theArray);
           break;
 
         case 7:
-          System.out.println("\nopissao 7");
+          case7Media(theArray);
+          
           break;
 
         case 8:
@@ -114,55 +112,39 @@ class Main {
      //==================================================================FUNCAO 5==================================================================
 
 
-     //==================================================================FUNCAO 6==================================================================
+     public static void case6Porcentual (int[] theArray){
+      double impar = 0;
+      for(int i = 0;i < theArray.length; i++){
+       if(theArray[i] % 2 == 1){   //Este if vai separar os impares
+          impar ++;
+        }
+      }
+      double porcent = (double)impar / theArray.length * 100;   //Aqui vamos traformar os numero impares de tipo double para porcentagem
+      System.out.println("\nO percentual dos números ímpares armazenados no vetor é: " + porcent + "%");
+     }
 
+    public static void case7Media(int[] theArray) {
+      int max = theArray[0];
+      int min = theArray[0];
+      double total = 0;
 
-     //==================================================================FUNCAO 7==================================================================
+      for(int valor : theArray){ 
+        if(valor<min){
+          min = valor; 
+        }   
+        if(valor>max){    //forEach para verificar todos os valores do vetor
+         max = valor;
+        }
+        total += valor;
+        }
+      
+   total -=(min + max); 
+   double resposta=(double) total  / (theArray.length -2); //Calculo da media centralizada
 
-
-     //==================================================================FUNCAO 8==================================================================
+   System.out.println("\nA media centralizada do vetor é " + resposta);
 }
+
+    }
+     //==================================================================FUNCAO 8==================================================================
 // tudo que for escrito entre ("") deve ter um '\n' antes para que possa ter um
 // espaçamento agradavel aos olhos no console, xuxu beleza 👍
-
-
-
-
-
-
-
-
-
-
-
-
-/*. 　　　。　　　　•　 　ﾟ　　。 　　.
-
-　　　.　　　 　　.　　　　　。　　 。　. 　
-
-.　　 。　　　　　 ඞ 。 . 　　 • 　　　　•
-
-　　ﾟ　　 Red was not An Impostor.　 。　.
-
-　　'　　　 1 Impostor remains 　 　　。
-
-　　ﾟ　　　.　　　. ,　　　　.　 . 
-
-
-
-
- ⠀⠀⠀⠀⣠⡴⠞⠛⠛⠛⠛⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⣼⡷⠶⠒⠒⠒⠶⢶⣄⠀⠀⠀⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⢠⡞⠁⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⢸⡅⠀⠀⠀⠀⠀⠀⠀⠀⣼⠃⠀⠀⠀⣿⠛⠛⢻⡆⠀⠀⠀⠀⠀
-⠀⢹⡷⠶⣤⣤⣤⣤⣤⡾⠃⠀⠀⠀⠀⢻⠀⠀⠈⣧⠀⠀⠀⠀⠀
-⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⣿⠀⠀⠀⠀⠀
-⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⣿⠀⠀⠀⠀⠀
-⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⣿⠀⠀⠀⠀⠀
-⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣤⡴⠟⠀⠀⠀⠀⢀
-⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⢤⣤⣤⠶⢾⡿
-⠀⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡾⠋⠀
-⠀⠀⠀⠈⠛⠶⠶⠶⣤⣀⠀⠀⠀⠀⢠⡶⠞⠛⠒⠛⠋⠁⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⠶⠴⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  */
-

@@ -24,14 +24,15 @@ class Main {
     int[] theArray = null;
    
    
-    System.out.println("\n== Bem vindo ao Programa da Ado1 ==");
+    System.out.println("\n=============================================== Bem vindo ao Programa da Ado1 ===============================================" + //
+        "");
 
     // while faz com que o programa se repita até a pessoa escolher a opçao 9
     while (!(operation == 9)) {
 
-      System.out.printf("\n\n===============================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9: Encerrar programa \n\n===============================================\n\n");
+      System.out.printf("\n=============================================================================================================================\n\n Escolha uma das opçoes abaixo: \n\n 1: Inicializar o vetor com números aleatórios \n\n 2: Imprimir o vetor \n\n 3: Verificar se um determinado número está contido no vetor \n\n 4: Buscar o maior número armazenado no vetor \n\n 5: Calcular a média dos números pares armazenados no vetor \n\n 6: Calcular o percentual dos números ímpares armazenados no vetor \n\n 7: Calcula a média centralizada dos números armazenados no vetor \n\n 8: Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado \n\n 9:  Encerrar programa \n\n=============================================================================================================================\n\n");
 
-      operation = ler.nextInt();
+      operation = ler.nextInt();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
       int op = operation; /* esse variavel é apenas para tornar mais curto e legivel a condiçao na opçao 'default' do 'switch'/* */
                            
 
@@ -85,17 +86,25 @@ class Main {
 
         case 6:
           double numPorcent = case6Porcentual(theArray);
-          System.out.println("\nO percentual dos números ímpares armazenados no vetor é: " + numPorcent + "%");
+          System.out.println("\nOs numeros impares representam " + numPorcent + "% dos numeros desse vetor");
           break;
 
         case 7:
         double mediaCentral = case7Media(theArray);
-        System.out.println("\nA media centralizada do vetor é " + mediaCentral);
+        System.out.printf("\nA media centralizada do vetor é %.2f", mediaCentral);
           
           break;
 
         case 8:
-          System.out.println("\nopissao 8");
+          System.out.println("\nInforme o valor que deseja verificar se pode ser somado: ");
+          int valor = ler.nextInt();
+          boolean tem = case8VerifyPlus(theArray, valor);
+          if (tem == true){
+            System.out.println("\nExiste");
+          }
+          else{
+            System.out.println("\nExiste nao");
+          }
           break;
 
         case 9:
@@ -116,6 +125,7 @@ class Main {
   }
      //Funcao 2
    public static void case2Print (int[] theArray) {
+     System.out.printf("\n\nConteudo do vetor: ");
     for (int i = 0; i < theArray.length; i++){ //percorre cada digito do vetor e printa ele
       System.out.printf(theArray[i] + " ");
     }
@@ -193,7 +203,19 @@ class Main {
    return resposta;
 }
 
+      //Funcao 8
+     public static boolean case8VerifyPlus(int[] theArray, int numSoma) {
+      if (theArray != null && theArray.length > 1) { //Condiçao que executa apenas se o array tiver 2+ numeros
+        for (int i = 0; i < theArray.length; i++) {
+          for (int somar = i + 1; somar < theArray.length; somar++) { //Aqui é formado todos os pares possiveis para soma
+              if (theArray[i] + theArray[somar] == numSoma) { 
+                 return true;
+          }
+        }
+      }
     }
-     //==================================================================FUNCAO 8==================================================================
-// tudo que for escrito entre ("") deve ter um '\n' antes para que possa ter um
-// espaçamento agradavel aos olhos no console, xuxu beleza 👍
+      return false;
+  }    
+}
+
+

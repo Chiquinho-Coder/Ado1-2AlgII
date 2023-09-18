@@ -43,7 +43,7 @@ class Main {
           System.out.println("\n Informe o numero limite do seu vetor::");
           int roof = ler.nextInt();
 
-          size = size -1;
+          
           theArray = new int[size];                                              
 
           for (int i = 0; i < size; i++) {
@@ -117,7 +117,7 @@ class Main {
      //Funcao 2
    public static void case2Print (int[] theArray) {
     for (int i = 0; i < theArray.length; i++){ //percorre cada digito do vetor e printa ele
-      System.out.println(theArray[i] + " ");
+      System.out.printf(theArray[i] + " ");
     }
     
      } 
